@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>teachonudemy</title>
+
+        <style>
+
+     .accordion-contents {
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .accordion-contents {
+      max-height: 1000px !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  }
+    </style>
+</head>
+<body>
+    
+        <nav class="bg-white relative z-20 shadow-md font-sans">
+
+         <!-- for mobile  -->
+      <div class="flex justify-between items-center h-18 ">
+        <div class="">
+          <!-- burger button -->
+  <button
+    id="mobile-menu-btn"
+    class="p-3 hover:bg-purple-100 rounded-md text-gray-700 hover:text-purple-700 focus:outline-none "
+    aria-label="Open menu"
+    aria-expanded="false"
+  >
+    <svg class="w-6 h-6 max-sm:w-4 max-sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+    <!-- Mobile Menu - Outside the flow, appears on top -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-50 flex">
+  <div class="w-80 max-sm:w-65 bg-white h-full shadow-2xl flex flex-col overflow-y-auto ">
+    <!-- Contents -->
+     <div class="mt-4 ">
+      <div class=" list-none flex flex-col border-b border-gray-400 pb-4 ">
+        <li class=" py-2 hover:bg-purple-100">  <a class="text-xl font-light text-purple-800 mx-4 " href="login.html">Log In</a> </li>
+        <li class="hover:bg-purple-100 py-2">   <a class="text-xl font-light text-purple-800 mx-4 " href="signup.html">Sign up</a></li>
+        <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light text-purple-800 mx-4 " href="plans&pricing.html">Plans & Pricing</a></li>
+      </div>
+      <div class="mt-4 text-gray-700 list-none border-b border-gray-400 pb-4">
+        <h1 class="text-md font-semibold mx-6">Explore by goal</h1>
+           <li class=" py-2 hover:bg-purple-100">  <a class="text-xl font-light mx-4 " href="">Learn AI</a> </li>
+        <li class="hover:bg-purple-100 py-2">   <a class="text-xl font-light mx-4 " href="">Launch a new career</a></li>
+        <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Prepare for certification</a></li>
+         <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Practice with role play</a></li>
+      </div>
+       <div class="mt-4 text-gray-700 list-none border-b border-gray-400 pb-4">
+        <h1 class="text-md font-semibold mx-6">Most Popular</h1>
+           <li class=" py-2 hover:bg-purple-100">  <a class="text-xl font-light mx-4 " href="">Web Development</a> </li>
+        <li class="hover:bg-purple-100 py-2">   <a class="text-xl font-light mx-4 " href="">Mobile Development</a></li>
+        <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Game Development</a></li>
+         <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Enterpreneurship</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Business Analytics & Intelligence</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Finance</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">IT Certifications</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Personal Transformation</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Graphic Design & Illustration</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Digital Marketing</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">All Categories</a></li>
+      </div>
+        <div class="mt-4 text-gray-700 list-none border-b border-gray-400 pb-4">
+        <h1 class="text-md font-semibold mx-6">More from Udemy</h1>
+           <li class=" py-2 hover:bg-purple-100">  <a class="text-xl font-light mx-4 " href="">Udemy Business</a> </li>
+        <li class="hover:bg-purple-100 py-2">   <a class="text-xl font-light mx-4 " href="">Get the app</a></li>
+        <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Invite friends</a></li>
+         <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Help and Support</a></li>
+      </div>
+     </div>
+  </div>
+ 
+  <!-- overlay -->
+  <div id="menu-overlay" class="flex-1 backdrop-blur-sm bg-opacity-50"> 
+                 <!-- cancel button -->
+  <div class="top-4 left-6 relative w-10 h-10 bg-white shadow-md rounded-full overflow-hidden flex justify-center items-center cursor-pointer">&times;</div>
+  </div>
+</div>
+
+        </div>
+        <!-- udemy logo -->
+     <div class="ml-15">
+          <a href="index.html" class="shrink-0">
+            <img class="w-25 max-sm:w-20"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_1_logo-udemy.svg"
+              alt=""
+            />
+          </a>
+        </div>
+
+        <!-- cart and search -->
+        <div class="flex items-center ">
+          <div class="rounded-md hover:bg-purple-100 ">
+            <button class="p-3 hover:text-[#5624d0]">
+              <svg
+                class="w-6 h-6 max-sm:w-4 max-sm:h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class=" hover:bg-purple-100 rounded-md ">
+            <button class="p-3 hover:text-[#5624d0]">
+              <a href="#" class="text-gray-700 hover:text-[#5624d0]">
+                <svg
+                  class="w-6 h-6 max-sm:w-4 max-sm:h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+     </nav>
+
+     <main class="overflow-hidden text-gray-900">
+        <section class=" md:relative md:h-120 lg:h-150 xl:h-185 md:z-10">
+            <div class=" h-full">
+                <img class="md:hidden w-full " src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_2_billboard-mobile-v3.jpg" alt="">
+                <img class="max-md:hidden lg:hidden  w-full h-full object-cover object-center md:scale-100" height="" src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_2_billboard-desktop-v4.jpg" alt="">
+                <img class="max-lg:hidden w-full h-full object-cover object-center md:scale-100" src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_20_billboard-desktop-2x-v4.jpg" alt="">
+            </div>
+            <div class="w-[90%] m-auto md:absolute md:left-10 lg:left-15 xl:left-30 md:top-15 lg:top-25 xl:top-45  md:max-w-sm ">
+                <h1 class="text-3xl md:text-6xl xl:text-[4rem] mt-8 font-semibold ">Come teach with us</h1>
+                <p class="text-[1.2rem] md:text-[1.3rem] xl:text-[1.5rem] font-light mt-4">Become an instructor and change lives — including your own</p>
+                  <div class=" rounded-md text-white font-bold bg-[#6d28d2] text-center mt-4 hover:bg-purple-700"><button class="cursor-pointer  w-full py-4 text-xl">Get Started</button></div>
+            </div>
+        </section>
+
+        <!-- section reasons to start -->
+         <section class=" text-gray-900 mt-20">
+          <h1 class="text-2xl text-center font-semibold lg:text-5xl">So many reasons to start</h1>
+          <article class="lg:flex justify-between gap-10 lg:mt-10">
+          <div class="m-auto  w-[60%] mb-8 text-center flex flex-col justify-center">
+            <img class=" self-center flex-1 mt-4" width="120px"  src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_21_value-prop-teach-2x-v3.jpg" alt="">
+            <h2 class="text-xl mt-4 font-semibold">Teach your way</h2>
+            <p class="mt-2 text-xl font-light ">Publish the course you want, in the way you want, and always have control of your own content.</p>
+          </div>
+              <div class="m-auto  w-[60%] mb-8 text-center flex flex-col justify-center">
+            <img class=" self-center flex-1 mt-4" width="120px"  src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_22_value-prop-inspire-2x-v3.jpg" alt="">
+            <h2 class="text-xl mt-4 font-semibold">Inspire learners</h2>
+            <p class="mt-2 text-xl font-light ">Teach what you know and help learners explore their interests, gain new skills, and advance their careers.</p>
+          </div>
+              <div class="m-auto  w-[60%] mb-8 text-center flex flex-col justify-center">
+            <img class=" self-center flex-1 mt-4" width="120px"  src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_23_value-prop-get-rewarded-2x-v3.jpg" alt="">
+            <h2 class="text-xl mt-4 font-semibold">Get rewarded</h2>
+            <p class="mt-2 text-xl font-light">Expand your professional network, build your expertise, and earn money on each paid enrollment.</p>
+          </div>
+          </article>
+         </section>
+
+         <!-- Numbers -->
+         <section class="bg-[#5022c3] text-white py-15">
+          <div class="w-[80%] m-auto flex flex-wrap gap-10 justify-between">
+          <div class="">
+            <h1 class="text-4xl font-semibold ">80M</h1>
+            <p class="text-xl text-center">Students</p>
+          </div>
+            <div class="">
+            <h1 class="text-4xl font-semibold">75+</h1>
+            <p class="text-xl text-center">Languages</p>
+          </div>
+            <div class="">
+            <h1 class="text-4xl font-semibold ">1.1B</h1>
+            <p class="text-xl text-center">Enrollment</p>
+          </div>
+            <div class=" ml-10">
+            <h1 class="text-4xl font-semibold">180+</h1>
+            <p class="text-xl text-center">Countries</p>
+          </div>
+            <div class="mr-10">
+            <h1 class="text-4xl font-semibold ">17,200+</h1>
+            <p class="text-xl text-center">Enterprise Customers</p>
+          </div>
+          </div>
+         </section>
+
+         <!-- Accordion -->
+         <section class="w-[95%] m-auto mt-10">
+          <h1 class="text-center text-2xl font-semibold">How to begin</h1>
+          <accordion>
+                    <!-- Main Container -->
+        <div
+          class="w-full mx-auto bg-white border-b border-t overflow-hidden mt-8 lg:flex justify-center border-slate-200 pb-4 "
+        >
+          <!-- ACCORDION ITEM 1 -->
+          <div class="border-b border-slate-200 last:border-0  flex-1">
+            <!-- The Button -->
+            <button
+              class="accordion-btn w-full flex items-center justify-between p-5 text-left group transition-colors focus:outline-none"
+            >
+              <span
+                class="font-medium text-xl text-slate-900 transition-colors"
+              >
+               Plan your curriculum
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-content mx-8 m-auto">
+              <!-- cards -->
+               <div class="mb-4">
+                <img src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_6_plan-your-curriculum-v3.jpg" alt="">
+               </div>
+               <div class="mb-4">
+                <p class="text-lg font-extralight mb-2">You start with your passion and knowledge. Then choose a promising topic with the help of our Marketplace Insights tool.</p>
+                <p class="text-lg font-light mb-4">The way that you teach — what you bring to it — is up to you.</p>
+                <h1 class="text-xl font-semibold mb-4">How we help you</h1>
+                <p class="text-lg font-extralight mb-2">We offer plenty of resources on how to create your first course. And, our instructor dashboard and curriculum pages help keep you organized.</p>
+               </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION ITEM 2 -->
+          <div class="border-b border-slate-200 last:border-0 flex-1">
+               <button
+              class="accordion-btn w-full flex items-center justify-between p-5 text-left group transition-colors focus:outline-none"
+            >
+              <span
+                class="font-medium text-xl text-slate-900 transition-colors"
+              >
+                Record your video
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+          <!-- The Content Panel -->
+            <div class="accordion-content mx-8 m-auto">
+              <!-- cards -->
+               <div class="mb-4">
+                <img src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_7_record-your-video-v3.jpg" alt="">
+               </div>
+               <div class="mb-4">
+                <p class="text-lg font-extralight mb-2">Use basic tools like a smartphone or a DSLR camera. Add a good microphone and you’re ready to start.</p>
+                <p class="text-lg font-light mb-4">If you don’t like being on camera, just capture your screen. Either way, we recommend two hours or more of video for a paid course.</p>
+                <h1 class="text-xl font-semibold mb-4">How we help you</h1>
+                <p class="text-lg font-extralight mb-2">Our support team is available to help you throughout the process and provide feedback on test videos.</p>
+               </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION ITEM 3 -->
+          <div class="border-b border-slate-200 last:border-0 flex-1">
+               <button
+              class="accordion-btn w-full flex items-center justify-between p-5 text-left group  transition-colors focus:outline-none"
+            >
+              <span
+                class="font-medium text-xl text-slate-900 transition-colors"
+              >
+               Launch your course
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+          <!-- The Content Panel -->
+            <div class="accordion-content mx-8 m-auto">
+              <!-- cards -->
+               <div class="mb-4">
+                <img src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_8_launch-your-course-v3.jpg" alt="">
+               </div>
+               <div class="mb-4">
+                <p class="text-lg font-extralight mb-2">Gather your first ratings and reviews by promoting your course through social media and your professional networks..</p>
+                <p class="text-lg font-light mb-4">Your course will be discoverable in our marketplace where you earn revenue from each paid enrollment.p>
+                <h1 class="text-xl font-semibold mb-4">How we help you</h1>
+                <p class="text-lg font-extralight mb-2">Our custom coupon tool lets you offer enrollment incentives while our global promotions drive traffic to courses. There’s even more opportunity for courses chosen for Udemy Business.</p>
+               </div>
+            </div>
+          </div>
+        </div>
+          </accordion>
+         </section>
+
+         <!-- Testimonial sections -->
+          <article class="bg-gray-100 py-8 mt-20">
+          <section class=" w-[95%] m-auto text-gray-800">
+            <div class="w-[70%] m-auto relative ">
+                 <button id="prevBtn" class="max-sm:hidden absolute left-0 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-6 z-10 bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+              <!-- slides and cards -->
+              <div id="slider" class=" flex overflow-x-auto   scroll-smooth no-scrollbar snap-x snap-mandatory">
+               <div class="lg:flex gap-10 border w-full rounded-lg shrink-0 snap-center border-gray-200">
+              <div class=" flex justify-center flex-1">
+                <img class="w-full object-center object-contain" src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_25_frank-2x-v2.jpg" alt="">
+              </div>
+              <div class="flex-1 ">
+                <p class="text-xl font-light mt-4 lg:mt-15 lg:text-2xl lg:font-normal">“I’m proud to wake up knowing my work is helping people around the world improve their careers and build great things. While being a full-time instructor is hard work, it lets you work when, where, and how you want.”</p>
+                <h3 class="font-bold text-xl mt-4">Frank Kane</h3>
+                <p class="text-xl font-light">Data Science & IT Certifications</p>
+              </div>
+              </div>
+                  <div class="lg:flex gap-10 w-full rounded-lg shrink-0 snap-center border-gray-200">
+              <div class=" flex justify-center flex-1">
+                <img class="w-full object-center object-contain " src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_26_paulo-2x.jpg" alt="">
+              </div>
+              <div class="flex-1">
+                <p class="text-xl font-light mt-4 lg:mt-15 lg:text-2xl lg:font-normal">“Udemy has changed my life. It’s allowed me to follow my passion and become a teacher I love to see my students succeed and hear them say they’ve learned more, quicker, from my courses than they did in college. It’s so humbling.”</p>
+                <h3 class="font-bold text-xl mt-4">Paulo Dichone</h3>
+                <p class="text-xl font-light">Developer (Android Speciality)</p>
+              </div>
+              </div>
+                  <div class="lg:flex gap-10 w-full rounded-lg shrink-0 snap-center border-gray-200">
+              <div class=" flex justify-center flex-1">
+                <img class="w-full object-center object-contain " src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_27_deborah-2x.jpg" alt="">
+              </div>
+              <div class="flex-1">
+                <p class="text-xl font-light mt-4 lg:mt-15 lg:text-2xl lg:font-normal">“Teaching on Udemy has provided me with two important elements: the opportunity to reach more learners than I ever would be able to on my own and a steady stream of extra income.”</p>
+                <h3 class="font-bold text-xl mt-4">Deborah Grayson Riege</h3>
+                <p class="text-xl font-light">Leadership, Communication</p>
+              </div>
+              </div>
+               </div>
+
+               <button id="nextBtn" class="max-sm:hidden absolute right-0 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-6 z-10 bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+            </div>
+          </section>
+          </article>
+
+          <section class="w-[95%] m-auto mt-20">
+            <div class="">
+            <div class="m-auto">
+              <img class=" w-150 m-auto object-center object-contain" src="./Teach Online - Share your knowledge with millions of students across the globe and earn money/imgi_28_support-1-2x-v3.jpg" alt="">
+            </div>
+            <div class="text-center m-auto mt-10 max-w-3xl">
+              <h1 class="text-2xl font-semibold ">You won’t have to do it alone</h1>
+              <p class="mt-4 text-xl xl:text-2xl font-light">Our <span class="font-normal">Instructor Support Team</span> is here to answer your questions and review your test video, while our <span class="font-normal">Teaching Center</span> gives you plenty of resources to help you through the process. Plus, get the support of experienced instructors in our <span class="font-normal">online community</span>.</p>
+              <div class="mt-8 rounded-md mx-15 hover:bg-purple-100"><button class=" w-full p-3"><a class="text-lg text-[#6d28d2] underline underline-offset-4 font-semibold" href="#">Need more details before you start? Learn more</a></button></div>
+            </div>
+            </div>
+          </section>
+
+          <article class="bg-gray-100 py-10 mt-10">
+          <section class="w-[90%] m-auto">
+            <div class="max-w-2xl text-center m-auto">
+              <h1 class="text-3xl lg:text-5xl font-semibold">Become an instructor today</h1>
+              <p class="text-[1.3rem] font-light mt-4 lg:text-2xl">Join one of the world’s largest online learning marketplaces.</p>
+            </div>
+            <div class="bg-[#6d28d2] m-auto hover:bg-purple-700 max-w-2xl mt-8 p-3 rounded-md text-center text-white font-semibold text-xl "><button>Get start</button></div>
+          </section>
+          </article>
+
+            <!-- accordion section -->
+              <article class="bg-[#2a2b3f] ">
+         <section class=" text-white w-[95%] m-auto overflow-hidden" >
+          <div class="lg:flex items-center mt-4 justify-between lg:gap-6 border-b border-gray-300 pb-4">
+                <div class="">
+            <h1 class="text-2xl font-semibold">Top companies choose  <span class="text-[#c0c4fb] hover:underline cursor-pointer">Udemy Business</span> to build in-demand career skills.</h1>
+          </div>
+          <div class="flex mt-4 gap-6  lg:mt-4 flex-wrap shrink-0">
+            <img width="150px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_35_nasdaq-light.svg" alt="">
+            <img width="70px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_36_volkswagen-light.svg" alt="">
+            <img width="150px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_37_netapp-light.svg" alt="">
+            <img width="150px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_38_eventbrite-light.svg" alt="">
+          </div>
+
+          </div>
+          
+          <!-- footer accordion section  -->
+
+          <div class="mt-15 mb-4">
+            <h1 class="text-2xl mb-8 font-semibold">Explore top skills and certifications</h1>
+       <div class="  md:grid grid-cols-4 gap-4 bg-[#2a2b3f]">
+
+      <!-- ACCORDION ITEM 1 -->
+          <div class="max-md:border-b  border-gray-400 last:border-0  mt-4">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl  transition-colors "
+              >
+                In-demand Careers
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Data Scientist</a>
+                <a class=" mb-4 hover:underline" href="#">Full Stack Web Developer</a>
+                <a class=" mb-4 hover:underline" href="#">Cloud Engineer</a>
+                <a class=" mb-4 hover:underline" href="#">Project Manager</a>
+                <a class=" mb-4 hover:underline" href="#">Game Developer</a>
+                <a class=" mb-4 hover:underline" href="#">All Careers Accelerators</a>
+               </div>
+            </div>
+          </div>
+
+             <!-- ACCORDION ITEM 2 -->
+          <div class="max-md:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Certification by Skill
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Cybersecurity Certification </a>
+                <a class=" mb-4 hover:underline" href="#">Project Management Certification</a>
+                <a class=" mb-4 hover:underline" href="#">Cloud Certification</a>
+                <a class=" mb-4 hover:underline" href="#">Data Analytics Certification</a>
+                <a class=" mb-4 hover:underline" href="#">HR Management Certification</a>
+                <a class=" mb-4 hover:underline" href="#">See all Certification</a>
+               </div>
+            </div>
+          </div>
+
+               <!-- ACCORDION ITEM 3 -->
+          <div class="max-md:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Web Development
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Web Development</a>
+                <a class=" mb-4 hover:underline" href="#">Javascript</a>
+                <a class=" mb-4 hover:underline" href="#">React JS</a>
+                <a class=" mb-4 hover:underline" href="#">Angular</a>
+                <a class=" mb-4 hover:underline" href="#">Java</a>
+               </div>
+            </div>
+          </div>
+
+                  <!-- ACCORDION ITEM 4 -->
+          <div class="max-md:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                IT Certification 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Amazon AWS</a>
+                <a class=" mb-4 hover:underline" href="#">AWS Certtified Cloud Practitioner </a>
+                <a class=" mb-4 hover:underline" href="#">AZ-900: Microsoft Azure Fundamentals</a>
+                <a class=" mb-4 hover:underline" href="#">AWS Certified Solutions Architects- Associate</a>
+                <a class=" mb-4 hover:underline" href="#">Kubernets</a>
+               </div>
+            </div>
+          </div>
+
+                  <!-- ACCORDION ITEM 5 -->
+          <div class="max-md:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Leadership 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Leadership</a>
+                <a class=" mb-4 hover:underline" href="#">Management Skill </a>
+                <a class=" mb-4 hover:underline" href="#">Project Management</a>
+                <a class=" mb-4 hover:underline" href="#">Personal Productivity</a>
+                <a class=" mb-4 hover:underline" href="#">Emotional Intelligence</a>
+               </div>
+            </div>
+          </div>
+
+              <!-- ACCORDION ITEM 6 -->
+          <div class="max-md:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Data Science 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Data Science</a>
+                <a class=" mb-4 hover:underline" href="#">Python </a>
+                <a class=" mb-4 hover:underline" href="#">Machine Learning</a>
+                <a class=" mb-4 hover:underline" href="#">ChatGPT</a>
+                <a class=" mb-4 hover:underline" href="#">Deep Learning</a>
+               </div>
+            </div>
+          </div>
+
+                   <!-- ACCORDION ITEM 7 -->
+          <div class=" max-md:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Communication 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Communication Skills </a>
+                <a class=" mb-4 hover:underline" href="#">Presentation skills </a>
+                <a class=" mb-4 hover:underline" href="#">Public Speaking</a>
+                <a class=" mb-4 hover:underline" href="#">Writing</a>
+                <a class=" mb-4 hover:underline" href="#">PowerPoint</a>
+               </div>
+            </div>
+          </div>
+
+                  <!-- ACCORDION ITEM 8 -->
+          <div class="max-md:border-b  border-gray-400 last:border-0  mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Business Analytics & Intelligence 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Microsoft Excel </a>
+                <a class=" mb-4 hover:underline" href="#">SQL</a>
+                <a class=" mb-4 hover:underline" href="#">Microsoft Power BI</a>
+                <a class=" mb-4 hover:underline" href="#">Data Analysis</a>
+                <a class=" mb-4 hover:underline" href="#">Business Analysis</a>
+               </div>
+            </div>
+          </div>
+
+    </div>
+          </div>
+         </section>
+          </article>
+
+                  <!-- footer -->
+           <section class=" border-b border-gray-400 bg-[#202230] text-white overflow-hidden">
+            <div class=" w-[95%] m-auto mt-15 lg:flex justify-between " >
+              <div class="flex flex-col mb-8">
+                 <h1 class="text-xl font-semibold mb-4">About</h1>
+              <a class="hover:underline mb-2" href="#">About Us</a>
+              <a class="hover:underline mb-2" href="#">Contact Us</a>
+              <a class="hover:underline mb-2" href="#">Blog</a>
+              <a class="hover:underline mb-2" href="#">Investors</a>
+            </div>
+                 <div class="flex flex-col mb-8">
+                 <h1 class="text-xl font-semibold mb-4">Discover Udemy</h1>
+              <a class="hover:underline mb-2" href="#">Get the app</a>
+              <a class="hover:underline mb-2" href="#">Teach on Udemy</a>
+              <a class="hover:underline mb-2" href="#">Plans and Pricing</a>
+              <a class="hover:underline mb-2" href="#">Affiliate</a>
+              <a class="hover:underline mb-2" href="#">Help and Support</a>
+            </div>
+                   <div class="flex flex-col mb-8">
+                 <h1 class="text-xl font-semibold mb-4">Udemy for Business</h1>
+              <a class="hover:underline mb-2" href="#">Udemy Business</a>
+                   </div>
+                        <div class="flex flex-col mb-8">
+                 <h1 class="text-xl font-semibold mb-4">Legal & Accessibility</h1>
+              <a class="hover:underline mb-2" href="#">Accessibility statement</a>
+              <a class="hover:underline mb-2" href="#">Privacy policy</a>
+              <a class="hover:underline mb-2" href="#">Sitemap</a>
+              <a class="hover:underline mb-2" href="#">Terms</a>
+            </div>
+            </div>
+           </section>
+
+           <footer class="bg-[#202230] overflow-x-hidden pb-8">
+            <div class="w-[95%] m-auto mt-8 text-white flex flex-col gap-20 justify-between lg:flex-row-reverse">
+              <div class="flex items-center ">
+          <button
+          class=" border-black p-2  h-10 w-10 flex items-center justify-center"
+        >
+          <svg
+            class="w-10 h-10"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+            ></path>
+          </svg>
+        </button>
+        <h1 class="text-xl">English</h1>
+              </div>
+              <div class=" flex items-center gap-4 ">
+                <img width="100px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_39_logo-udemy-inverted.svg" alt="">
+                <p> &copy; 2025 Udemy, Inc.</p>
+              </div>
+      </div>
+
+           </footer>
+
+     </main>
+
+     <script>
+
+      //  Nav bar for mobile burger button 
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('menu-overlay');
+
+        // Toggle Menu
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close Menu when clicking the dark overlay
+        overlay.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+ 
+
+ // all accordion buttons
+        const accordions = document.querySelectorAll('.accordion-btn');
+
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                // 1. Toggle the icon rotation
+                const icon = this.querySelector('i');
+                icon.classList.toggle('rotate-180');
+                
+                // 2. Change text color to blue when active (optional aesthetic choice)
+                const text = this.querySelector('span');
+                // text.classList.toggle('text-blue-600');
+
+                // 3. Handle the contentf panel
+                const contentf = this.nextElementSibling;
+                
+                if (contentf.style.maxHeight) {
+                    // If it is open, close it
+                    contentf.style.maxHeight = null;
+                    contentf.classList.remove('open');
+                } else {
+                    // If it is closed, open it to its specific scrollHeight
+                    contentf.style.maxHeight = contentf.scrollHeight + "px";
+                    contentf.classList.add('open');
+                }
+            });
+        });
+
+
+                const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Scroll amount: Width of card + gap (approx 384px + 24px)
+        const scrollAmount = 550; 
+
+        nextBtn.addEventListener('click', () => {
+            slider.scrollLeft += scrollAmount;
+            checkButtons();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            slider.scrollLeft -= scrollAmount;
+            checkButtons();
+        });
+
+        // Optional: Hide/Show buttons based on scroll position
+        const checkButtons = () => {
+            // Small timeout to allow scroll to complete
+            setTimeout(() => {
+                if (slider.scrollLeft <= 0) {
+                    prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+            }, 500);
+        };
+
+        // Initial check
+        checkButtons();
+
+        
+        
+        // FOOTER ACCORDION 
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".accordion-btn1");
+  const breakpoint = 1024;
+
+  const closeAll = () => {
+    document.querySelectorAll(".accordion-contents").forEach(c => {
+      c.style.maxHeight = c.style.opacity = "0";
+      c.style.visibility = "hidden";
+      c.previousElementSibling.querySelector("i")?.classList.remove("rotate-180");
+    });
+  };
+
+  const toggle = (e) => {
+    const btn = e.currentTarget;
+    const content = btn.nextElementSibling;
+    const arrow = btn.querySelector("i");
+    const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
+    closeAll(); // close others first
+
+    if (isOpen) {
+      content.style.maxHeight = content.style.opacity = "0";
+      content.style.visibility = "hidden";
+      arrow.classList.remove("rotate-180");
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.opacity = "1";
+      content.style.visibility = "visible";
+      arrow.classList.add("rotate-180");
+    }
+  };
+
+  const update = () => {
+    const isDesktop = window.innerWidth >= breakpoint;
+
+    document.querySelectorAll(".border-b").forEach(item => {
+      item.classList.toggle("lg:col-span-1", isDesktop);
+    });
+
+    document.querySelectorAll(".accordion-contents").forEach(content => {
+      if (isDesktop) {
+        content.style.maxHeight = "1024px";
+        content.style.opacity = "1";
+        content.style.visibility = "visible";
+      } else if (!content.style.maxHeight || content.style.maxHeight === "1024px") {
+        content.style.maxHeight = content.style.opacity = "0";
+        content.style.visibility = "hidden";
+      }
+    });
+
+    buttons.forEach(btn => {
+      btn.classList.toggle("cursor-default", isDesktop);
+      btn.classList.toggle("pointer-events-none", isDesktop);
+      btn.querySelector("i")?.classList.toggle("hidden", isDesktop);
+      btn.onclick = isDesktop ? null : toggle;
+    });
+  };
+
+  // Initial + resize (debounced)
+  update();
+  let timer;
+  window.addEventListener("resize", () => {
+    clearTimeout(timer);
+    timer = setTimeout(update, 100);
+  });
+});
+
+
+     </script>
+</body>
+</html>

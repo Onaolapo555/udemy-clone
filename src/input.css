@@ -1,0 +1,38 @@
+@import "tailwindcss";
+.h-text {
+    @apply text-[2rem] font-[600] text-gray-800 leading-tight;
+
+}
+
+.p-text {
+    @apply text-[#2a2b3f] text-[1.2rem];
+
+}
+
+
+
+        /* This CSS handles the smooth sliding animation.
+           We transition max-height because 'height: auto' cannot be transitioned natively in CSS.
+        */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        
+        /* This class is added via JS when the accordion is open */
+        .accordion-content.open {
+            opacity: 1;
+        }
+
+                /* Utility to hide scrollbar */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Utility to hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+

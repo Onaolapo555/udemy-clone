@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plans&pricing</title>
+    <link rel="stylesheet" href="./src/output.css">
+
+        <style>
+
+     .accordion-contents {
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .accordion-contents {
+      max-height: 1000px !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  }
+    </style>
+</head>
+<body>
+
+    
+      <!-- navigation Bar -->
+    <nav class="bg-white shadow-md font-sans">
+
+      <!-- for mobile  -->
+      <div class="flex justify-between items-center h-18 lg:hidden ">
+        <div class="">
+          <!-- burger button -->
+  <button
+    id="mobile-menu-btn"
+    class="p-3 text-gray-700 hover:text-purple-700 focus:outline-none hover:bg-purple-100 rounded-md "
+    aria-label="Open menu"
+    aria-expanded="false"
+  >
+    <svg class="w-6 h-6 max-sm:w-5 max-sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+     <!-- Mobile Menu - Outside the flow, appears on top -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-50 flex">
+  <div class="w-80 max-sm:w-65 bg-white h-full shadow-2xl flex flex-col overflow-y-auto ">
+    <!-- Contents -->
+     <div class="mt-4 ">
+      <div class=" list-none flex flex-col border-b border-gray-400 pb-4 ">
+        <li class=" py-2 hover:bg-purple-100">  <a class="text-xl font-light text-purple-800 mx-4 " href="login.html">Log In</a> </li>
+        <li class="hover:bg-purple-100 py-2">   <a class="text-xl font-light text-purple-800 mx-4 " href="signup.html">Sign up</a></li>
+        <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light text-purple-800 mx-4 " href="plans&pricing.html">Plans & Pricing</a></li>
+         <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light text-purple-800 mx-4 " href="teach.html">Teach on Udemy</a></li>
+      </div>
+      <div class="mt-4 text-gray-700 list-none border-b border-gray-400 pb-4">
+        <h1 class="text-md font-semibold mx-6">Explore by goal</h1>
+           <li class=" py-2 hover:bg-purple-100">  <a class="text-xl font-light mx-4 " href="">Learn AI</a> </li>
+        <li class="hover:bg-purple-100 py-2">   <a class="text-xl font-light mx-4 " href="">Launch a new career</a></li>
+        <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Prepare for certification</a></li>
+         <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Practice with role play</a></li>
+      </div>
+       <div class="mt-4 text-gray-700 list-none border-b border-gray-400 pb-4">
+        <h1 class="text-md font-semibold mx-6">Most Popular</h1>
+           <li class=" py-2 hover:bg-purple-100">  <a class="text-xl font-light mx-4 " href="">Web Development</a> </li>
+        <li class="hover:bg-purple-100 py-2">   <a class="text-xl font-light mx-4 " href="">Mobile Development</a></li>
+        <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Game Development</a></li>
+         <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Enterpreneurship</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Business Analytics & Intelligence</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Finance</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">IT Certifications</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Personal Transformation</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Graphic Design & Illustration</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Digital Marketing</a></li>
+          <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">All Categories</a></li>
+      </div>
+        <div class="mt-4 text-gray-700 list-none border-b border-gray-400 pb-4">
+        <h1 class="text-md font-semibold mx-6">More from Udemy</h1>
+           <li class=" py-2 hover:bg-purple-100">  <a class="text-xl font-light mx-4 " href="">Udemy Business</a> </li>
+        <li class="hover:bg-purple-100 py-2">   <a class="text-xl font-light mx-4 " href="">Get the app</a></li>
+        <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Invite friends</a></li>
+         <li class="hover:bg-purple-100 py-2">  <a class="text-xl font-light mx-4 " href="">Help and Support</a></li>
+      </div>
+     </div>
+  </div>
+ 
+  <!-- overlay -->
+  <div id="menu-overlay" class="flex-1 backdrop-blur-sm bg-opacity-50"> 
+                 <!-- cancel button -->
+  <div class="top-4 left-6 relative w-10 h-10 bg-white shadow-md rounded-full overflow-hidden flex justify-center items-center cursor-pointer">&times;</div>
+  </div>
+</div>
+
+        </div>
+
+        <!-- udemy logo -->
+        <div class="ml-15">
+          <a href="index.html" class="shrink-0">
+            <img class="w-25 max-sm:w-20"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_1_logo-udemy.svg"
+              alt=""
+            />
+          </a>
+        </div>
+
+        <!-- cart and search -->
+        <div class="flex items-center gap-2 max-sm:gap-0">
+          <div class=" hover:bg-purple-100 rounded-md">
+            <button class="p-3 hover:text-[#5624d0]">
+              <svg
+                class="w-6 h-6 max-sm:w-4 max-sm:h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class=" hover:bg-purple-100 rounded-md">
+            <button class="p-3 hover:text-[#5624d0]">
+              <a href="#" class="text-gray-700 hover:text-[#5624d0]">
+                <svg
+                  class="w-6 h-6 max-sm:w-4 max-sm:h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop nav bar  -->
+      <div
+        class="flex justify-between items-center  max-lg:hidden h-20 mx-4 "
+      >
+        <a href="index.html" class="shrink-0 pr-3">
+          <img
+            width="100px"
+            src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_1_logo-udemy.svg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="text-gray-700 hover:text-[#5624d0] p-3 hover:bg-purple-100 rounded-sm text-lg font-light">
+          Explore
+        </a>
+        <div class="md:flex flex-1 max-w-md p-3">
+          <form class="w-full relative">
+            <div
+              class="search-group flex items-center w-full h-15 rounded-full border border-gray-400 bg-gray-50 overflow-hidden px-2 transition-colors"
+            >
+              <button
+                type="submit"
+                class="p-2 text-gray-400 hover:text-gray-600"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </button>
+              <input
+                type="text"
+                class="w-full bg-transparent outline-none text-gray-700 placeholder-gray-500 ml-1 h-full text-md"
+                placeholder="Search for anything"
+              />
+            </div>
+          </form>
+        </div>
+        <div class=" p-3  text-lg font-light rounded-md hover:bg-purple-100 cursor-pointer hover:text-purple-900">
+          <a href="plans&pricing.html">Plans & Pricing</a>
+        </div>
+        <div class="p-3  text-lg font-light rounded-md hover:bg-purple-100 cursor-pointer hover:text-purple-900">
+          <a href="#">Udemy Business</a>
+        </div>
+        <div class="p-3  text-lg font-light rounded-md hover:bg-purple-100 cursor-pointer max-xl:hidden  hover:text-purple-900">
+          <a href="teach.html">Teach on Udemy</a>
+        </div>
+        <div class=" p-1 hover:bg-purple-100">
+          <button class="p-2 hover:text-[#5624d0]">
+            <a href="#" class="text-gray-700 hover:text-[#5624d0]">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </a>
+          </button>
+        </div>
+        <div class="flex gap-2">
+          <a
+            href="login.html"
+            class="text-md font-bold text-purple-600 border px-6 py-6 rounded-md hover:bg-purple-100 transition h-10 flex items-center   "
+            >Log in</a
+          >
+          <a
+            href="signup.html"
+            class="rounded-md text-normal font-bold text-white bg-purple-800 border border-purple-600 px-6 py-6  transition h-10 flex items-center hover:bg-purple-600"
+            >Sign up</a
+          >
+              <button
+          class="border border-purple-600  hover:bg-purple-100 px-3 flex items-center justify-center rounded-md"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+            ></path>
+          </svg>
+        </button>
+        </div>
+    
+      </div>
+    </nav>
+    
+    <main class="mt-20">
+        <section class="w-[95%] m-auto text-gray-900 mt-8">
+            <h1 class="text-2xl xl:text-6xl font-semibold text-center mb-6">Choose a plan for success</h1>
+            <p class="text-xl font-light xl:text-2xl xl:text-center">Don't want to buy courses one by one? Pick a plan to help you, your team, or your organization achieve outcomes faster.</p>
+
+            <!-- accordion section -->
+       <div class="  xl:grid grid-cols-3 gap-4 mt-20">
+
+      <!-- ACCORDION ITEM 1 -->
+          <div class="border border-t-10 rounded-md border-t-purple-700  border-gray-400 bg-gray-100 xl:h-130 ">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <div class="ml-8 mt-4">
+                <div>
+                 <h1 class="font-medium text-xl  transition-colors " >Personal Plan</h1>
+                <p>For you</p>
+                </div>
+                <div class="flex gap-2 mt-4">
+                       <img width="20px" src="./Two users icon _ Freepik/user-regular-full.svg" alt="">
+                       <p class="font-light text-gray-700">Individual</p>
+                </div>
+              </div>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6 mx-8 ">
+              <!-- cards -->
+              <h4 class="mt-8 text-xl font-light mb-4">Starting at $7,500 per month</h4>
+              <p class="text-sm text-gray-500 mb-6">Billed monthly or annually. Cancel anytime.</p>
+              <div class=" rounded-md text-white font-bold max-lg:bg-[#dac9f3] lg:bg-[#6d28d2] text-cente "><button class=" w-full py-4">Try it free  &rightarrow;</button></div>
+              
+              
+                  <div class="mt-8 flex flex-col">
+                    <span class=" inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Access to 26,000+ top courses</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Certification prep</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Goal-focused recommendations</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">AI-powered coding exercise</span>
+                    
+                  </div>
+            </div>
+          </div>
+
+             <!-- ACCORDION ITEM 2 -->
+             <div class="border border-t-10 rounded-md border-t-[#5022c3]   border-gray-400 xl:h-140  bg-gray-100">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <div class="ml-8 mt-4">
+                <div>
+                 <h1 class="font-medium text-xl  transition-colors " >Team Plan</h1>
+                <p>For your team</p>
+                </div>
+                <div class="flex gap-2 mt-4">
+                       <img class="shrink-0" width="20px" src="./Two users icon _ Freepik/user-group-solid-full.svg" alt="">
+                       <p class="font-light text-gray-700">2 to 50 people </p>
+                </div>
+              </div>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6 mx-8 ">
+              <!-- cards -->
+              <h4 class="mt-8 text-xl font-semibold mb-4">$18,000 a month per month</h4>
+              <p class="text-sm text-gray-500 mb-6">Billed annually. Cancel anytime.</p>
+              <div class=" rounded-md text-white font-bold bg-[#6d28d2] text-cente "><button class=" w-full py-4">Try it free  &rightarrow;</button></div>
+              
+              
+                  <div class="mt-8 flex flex-col">
+                    <span class=" inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Access to 13,000+ top courses</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Certification prep</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Goal-focused recommendations</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">AI-powered coding exercise</span>
+                         <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Analytics and adoption reports</span>
+                    
+                  </div>
+            </div>
+          </div>
+
+               <!-- ACCORDION ITEM 3 -->
+        <div class="border border-t-10 rounded-md border-t-[#5022c3]  border-gray-400  bg-gray-100">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <div class="ml-8 mt-4">
+                <div>
+                 <h1 class="font-medium text-xl  transition-colors " >Enterprise Plan</h1>
+                <p>For your whole organization</p>
+                </div>
+                <div class="flex gap-2 mt-4">
+                       <img class="shrink-0" width="20px" src="./Two users icon _ Freepik/users-solid-full.svg" alt="">
+                       <p class="font-light text-gray-700">More than 20 people </p>
+                </div>
+              </div>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6 mx-8 ">
+              <!-- cards -->
+              <h4 class="mt-8 text-xl font-semibold mb-8">Contact sales for pricing</h4>
+              <!-- <p class="text-sm text-gray-500 mb-6">Billed annually. Cancel anytime.</p> -->
+              <div class=" rounded-md text-white font-bold bg-[#6d28d2] text-cente "><button class=" w-full py-4">Request a demo  &rightarrow;</button></div>
+              
+              
+                  <div class=" flex flex-col mt-4">
+                    <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Access to 30,000+ top courses</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Certification prep</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Goal-focused recommendations</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">AI-powered coaching</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Advanced analytics and insights</span>         
+                       <span class=" inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">International course collection featuring 15 languages</span>
+                       <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Dedicated customer success team</span>    
+                           <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Customizable content</span>    
+                          <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Strategic implementation services with add-on</span>    
+                      <span class="inline-flex gap-2 items-center  text-[1.2rem] font-light text-gray-800 mb-4"><img class=" w-4 h-4" src="./Two users icon _ Freepik/check.png" alt="">Strategic implementation services with add-ons</span>         
+                  </div>
+            </div>
+          </div>
+       </div>
+        </section>
+
+          <!-- Sections logos -->
+      <section class="bg-gray-100 mt-8 pt-4 pb-8">
+        <div class="w-[90%] m-auto mt-8">
+          <h1 class="mt-8 text-[1.2rem] text-center text-gray-600">
+            Trusted by over 17,000 companies and millions of learners around the
+            world
+          </h1>
+          <div
+            class="grid grid-cols-4 gap-8 items-center mt-8 lg:flex lg:justify-between"
+          >
+            <img
+              width="70px"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_4_volkswagen_logo.svg"
+              alt=""
+            />
+            <img
+              width="100px"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_5_samsung_logo.svg"
+              alt=""
+            />
+            <img
+              width="100px"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_6_cisco_logo.svg"
+              alt=""
+            />
+            <img
+              width="100px"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_7_vimeo_logo_resized-2.svg"
+              alt=""
+            />
+            <img
+              width="70px"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_8_procter_gamble_logo.svg"
+              alt=""
+            />
+            <img
+              width="100px"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_9_hewlett_packard_enterprise_logo.svg"
+              alt=""
+            />
+            <img
+              width="90px"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_10_citi_logo.svg"
+              alt=""
+            />
+            <img
+              width="70px"
+              src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_11_ericsson_logo.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+            <!-- Comments Join others -->
+      <section class="mt-8 w-[95%] m-auto">
+        <h1 class="text-3xl font-medium">
+          Join others transforming their lives through learning
+        </h1>
+       
+
+        <!-- cards slides -->
+            <div class="relative w-full max-w-8xl mx-auto mt-8">
+        
+       <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-6 z-10 bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+
+        <!-- cards -->
+           <div id="slider" class="flex overflow-x-auto space-x-6 pb-8 pt-4 px-4 scroll-smooth no-scrollbar snap-x snap-mandatory">
+            
+            <div class="bg-white rounded-lg p-6 w-80 md:w-96 shrink-0 snap-center border border-gray-200">
+                <p class="text-gray-600 text-4xl font-serif mb-2"><b>“</b></p>
+                <p class="text-gray-700 mb-6 h-32">Udemy was rated the <b>most popular online course or certification program</b> for learning how to code according to <span class="text-purple-700 font-normal">StackOverflow's 2023 Developer survey</span>.</p>
+                
+                <div class=" border-gray-100 pt-4 mt-8">
+                    <div class="flex items-center mb-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Stack_Overflow_icon.svg" alt="Stack Overflow" class="w-8 h-8 mr-2">
+                        <p class="text-gray-800 font-bold text-sm">Stack Overflow</p>
+                    </div>
+                    <p class="text-gray-500 text-md mb-4">37,076 responses collected</p>
+                    <a href="#" class="text-purple-700 font-normal text-md flex items-center">
+                        View Web Development courses
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 w-80 md:w-96 shrink-0 snap-center border border-gray-200">
+                <p class="text-gray-600 text-4xl font-serif mb-2"><b>“</b></p>
+                <p class="text-gray-700 mb-6 h-32">Udemy was truly a <span class="font-semibold text-gray-900">game-changer and a great guide</span> for me as we brought Dimensional to life.</p>
+                
+                <div class=" pt-4 mt-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-20 h-12 rounded-full mr-3 flex items-center justify-center font-bold text-white"><img class="rounded-full" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_112_Alvin_Lim.jpg" alt=""></div>
+                        <div>
+                            <p class="font-normal text-gray-800 text-sm">Alvin Lim</p>
+                            <p class="text-gray-500 text-md">Technical Co-Founder, CTO at Dimensional</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-purple-700 font-normal text-md flex items-center">
+                        View this iOS & Swift course
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </a>
+                </div>
+            </div>
+
+                   <div class="bg-white rounded-lg  p-6 w-80 md:w-96 shrink-0 snap-center border border-gray-200">
+                <p class="text-gray-600 text-4xl font-serif mb-2"><b>“</b></p>
+                <p class="text-gray-700 mb-6 h-32">Udemy gives you the ability to be persistent. I learned exactly what I needed to know in the real world. It helped me sell myself to <span class="font-semibold text-gray-900">get a new role</span>.</p>
+                
+                <div class=" border-gray-100 pt-4 mt-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-25 h-25 rounded-ful mr-3 flex items-center justify-center"><img width="100%" class="rounded-full" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_119_William_A_Wachlin.jpg" alt=""></div>
+                        <div>
+                            <p class="font-normal text-gray-800 text-sm">William A. Wachlin</p>
+                            <p class="text-gray-500 text-md">Partner Account Manager at Amazon Web Services</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-purple-700 font-normal text-md flex items-center">
+                        View this AWS course
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </a>
+                </div>
+            </div>
+
+                          <div class="bg-white rounded-lg p-6 w-80 md:w-96 shrink-0 snap-center border border-gray-200">
+                <p class="text-gray-600 text-4xl font-serif mb-2"><b>“</b></p>
+                <p class="text-gray-700 mb-6 h-32">With Udemy Business employees were able to marry the two together, technology and consultant soft skills... to help <span class="font-semibold text-gray-900">drive their careers forward</span>.</p>
+                
+                <div class=" border-gray-100 pt-4 mt-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-20 h-20 rounded-full mr-3 flex items-center justify-center"><img width="100%" class="rounded-full" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_16_Ian_Stevens.png" alt=""></div>
+                        <div>
+                            <p class="font-normal text-gray-800 text-sm">Ian Stevens</p>
+                            <p class="text-gray-500 text-md">Head of Capability Development, North America at Publicis Sapient</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-purple-700 font-normal text-md flex items-center">
+                        Read full story
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </a>
+                </div>
+            </div>
+        
+        <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-6 z-10 bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- svg -->
+  <div class="flex items-center space-x-2 text-1xl font-bold text-purple-700 max-md:hidden">
+    <span>View all stories</span>
+    
+     <svg style="display: none;">
+  <symbol id="icon-cta-arrow" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"></path>
+  </symbol>
+</svg>
+    <svg class="w-6 h-6 fill-current">
+        <use xlink:href="#icon-cta-arrow"></use>
+    </svg>
+</div>
+
+      </section>
+
+      <!-- section FAQS -->
+
+      <article class="bg-gray-100 mt-8 pb-8">
+      <section class="w-[95%] m-auto overflow-hidden">
+        <h1 class="text-xl font-semibold text-center mt-8">Frequently asked questions </h1>
+              <div
+          class="w-full mx-auto bg-transparent border-b border-t overflow-hidden border-slate-400 mt-6 lg:max-w-5xl" >
+
+          <!-- ACCORDION ITEM 1 -->
+          <div class="border-b border-slate-400 last:border-0 ">
+            <!-- The Button -->
+            <button
+              class="accordion-btn w-full flex items-center justify-between p-5 text-left group hover:bg-slate-50 transition-colors focus:outline-none"
+            >
+              <span
+                class="font-medium text-xl text-slate-900 transition-colors"
+              >
+                How are courses selected for the plans 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-content ">
+              <!-- cards -->
+               <div class="mx-6 py-4 text-gray-500">
+                    <p>Each course included in our plans is curated from the 250,000+ courses in our overall catalog. Our content experts use insights from 80 million Udemy learners to identify top-rated, relevant courses on the most sought-after professional topics as well as a selection of personal development topics.</p>
+               </div>
+                  </div>
+          </div>
+
+                  <!-- ACCORDION ITEM 2 -->
+          <div class="border-b border-slate-400 last:border-0 ">
+            <!-- The Button -->
+            <button
+              class="accordion-btn w-full flex items-center justify-between p-5 text-left group hover:bg-slate-50 transition-colors focus:outline-none"
+            >
+              <span
+                class="font-medium text-xl text-slate-900 transition-colors"
+              >
+                How is Personal  Plan different from buying a course?
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-content ">
+              <!-- cards -->
+               <div class="mx-6 py-4 text-gray-500">
+                    <p>With Personal Plan, your learning opportunities are endless. You’ll gain monthly access to our top-rated courses, coding exercises, and practice tests in a variety of professional and personal development categories. You can learn one skill or multiple skills at once. Alternatively, if you buy courses one at a time, you’ll get lifetime access to those courses only.</p>
+               </div>
+                  </div>
+          </div>
+
+                 <!-- ACCORDION ITEM 3 -->
+          <div class="border-b border-slate-400 last:border-0 ">
+            <!-- The Button -->
+            <button
+              class="accordion-btn w-full flex items-center justify-between p-5 text-left group hover:bg-slate-50 transition-colors focus:outline-none"
+            >
+              <span
+                class="font-medium text-xl text-slate-900 transition-colors"
+              >
+                What languages does Enterprise Plan have content for?
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-content ">
+              <!-- cards -->
+               <div class="mx-6 py-4 text-gray-500">
+                    <p>Enterprise Plan includes our international collection of original-language content in 16 languages, including English, Spanish, Portuguese, French, Italian, German, Indonesian, Japanese, Korean, Polish, Russian, Turkish, Arabic, Hindi, Vietnamese, and simplified and traditional Chinese.</p>
+               </div>
+                  </div>
+          </div>
+
+                <!-- ACCORDION ITEM 3 -->
+          <div class="border-b border-slate-400 last:border-0 ">
+            <!-- The Button -->
+            <button
+              class="accordion-btn w-full flex items-center justify-between p-5 text-left group hover:bg-slate-50 transition-colors focus:outline-none"
+            >
+              <span
+                class="font-medium text-xl text-slate-900 transition-colors"
+              >
+                What is Udemy Business Pro?
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-content ">
+              <!-- cards -->
+               <div class="mx-6 py-4 text-gray-500">
+                    <p>With the Udemy Business Pro add-on for Enterprise Plan, you get access to a powerful combination of learning tools for your tech learners. In addition to the top-rated courses available with your plan, your employees can also take advantage of hands-on training features like assessments, labs, workspaces, and Udemy paths.</p>
+               </div>
+                  </div>
+          </div>
+              </div>
+      </section>
+      </article>
+
+             <!-- accordion section -->
+              <article class="bg-[#2a2b3f] ">
+         <section class=" text-white w-[95%] m-auto overflow-hidden" >
+          <div class="lg:flex items-center mt-4 justify-between lg:gap-6 border-b border-gray-300 pb-4">
+                <div class="">
+            <h1 class="text-2xl font-semibold">Top companies choose  <span class="text-[#c0c4fb] hover:underline cursor-pointer">Udemy Business</span> to build in-demand career skills.</h1>
+          </div>
+          <div class="flex mt-4 gap-6  lg:mt-4 flex-wrap shrink-0">
+            <img width="150px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_35_nasdaq-light.svg" alt="">
+            <img width="70px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_36_volkswagen-light.svg" alt="">
+            <img width="150px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_37_netapp-light.svg" alt="">
+            <img width="150px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_38_eventbrite-light.svg" alt="">
+          </div>
+
+          </div>
+          
+          <!-- footer accordion section  -->
+
+          <div class="mt-15 mb-4">
+            <h1 class="text-2xl mb-8 font-semibold">Explore top skills and certifications</h1>
+       <div class="  md:grid grid-cols-4 gap-4 bg-[#2a2b3f]">
+
+      <!-- ACCORDION ITEM 1 -->
+          <div class="max-lg:border-b  border-gray-400 last:border-0  mt-4">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl  transition-colors "
+              >
+                In-demand Careers
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Data Scientist</a>
+                <a class=" mb-4 hover:underline" href="#">Full Stack Web Developer</a>
+                <a class=" mb-4 hover:underline" href="#">Cloud Engineer</a>
+                <a class=" mb-4 hover:underline" href="#">Project Manager</a>
+                <a class=" mb-4 hover:underline" href="#">Game Developer</a>
+                <a class=" mb-4 hover:underline" href="#">All Careers Accelerators</a>
+               </div>
+            </div>
+          </div>
+
+             <!-- ACCORDION ITEM 2 -->
+          <div class="max-lg:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Certification by Skill
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Cybersecurity Certification </a>
+                <a class=" mb-4 hover:underline" href="#">Project Management Certification</a>
+                <a class=" mb-4 hover:underline" href="#">Cloud Certification</a>
+                <a class=" mb-4 hover:underline" href="#">Data Analytics Certification</a>
+                <a class=" mb-4 hover:underline" href="#">HR Management Certification</a>
+                <a class=" mb-4 hover:underline" href="#">See all Certification</a>
+               </div>
+            </div>
+          </div>
+
+               <!-- ACCORDION ITEM 3 -->
+          <div class="max-lg:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Web Development
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Web Development</a>
+                <a class=" mb-4 hover:underline" href="#">Javascript</a>
+                <a class=" mb-4 hover:underline" href="#">React JS</a>
+                <a class=" mb-4 hover:underline" href="#">Angular</a>
+                <a class=" mb-4 hover:underline" href="#">Java</a>
+               </div>
+            </div>
+          </div>
+
+                  <!-- ACCORDION ITEM 4 -->
+          <div class="max-lg:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                IT Certification 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Amazon AWS</a>
+                <a class=" mb-4 hover:underline" href="#">AWS Certtified Cloud Practitioner </a>
+                <a class=" mb-4 hover:underline" href="#">AZ-900: Microsoft Azure Fundamentals</a>
+                <a class=" mb-4 hover:underline" href="#">AWS Certified Solutions Architects- Associate</a>
+                <a class=" mb-4 hover:underline" href="#">Kubernets</a>
+               </div>
+            </div>
+          </div>
+
+                  <!-- ACCORDION ITEM 5 -->
+          <div class="max-lg:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Leadership 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Leadership</a>
+                <a class=" mb-4 hover:underline" href="#">Management Skill </a>
+                <a class=" mb-4 hover:underline" href="#">Project Management</a>
+                <a class=" mb-4 hover:underline" href="#">Personal Productivity</a>
+                <a class=" mb-4 hover:underline" href="#">Emotional Intelligence</a>
+               </div>
+            </div>
+          </div>
+
+              <!-- ACCORDION ITEM 6 -->
+          <div class="max-lg:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Data Science 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Data Science</a>
+                <a class=" mb-4 hover:underline" href="#">Python </a>
+                <a class=" mb-4 hover:underline" href="#">Machine Learning</a>
+                <a class=" mb-4 hover:underline" href="#">ChatGPT</a>
+                <a class=" mb-4 hover:underline" href="#">Deep Learning</a>
+               </div>
+            </div>
+          </div>
+
+                   <!-- ACCORDION ITEM 7 -->
+          <div class=" max-lg:border-b border-gray-400 last:border-0 mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Communication 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Communication Skills </a>
+                <a class=" mb-4 hover:underline" href="#">Presentation skills </a>
+                <a class=" mb-4 hover:underline" href="#">Public Speaking</a>
+                <a class=" mb-4 hover:underline" href="#">Writing</a>
+                <a class=" mb-4 hover:underline" href="#">PowerPoint</a>
+               </div>
+            </div>
+          </div>
+
+                  <!-- ACCORDION ITEM 8 -->
+          <div class="max-lg:border-b  border-gray-400 last:border-0  mt-6">
+            <!-- The Button -->
+            <button
+              class="accordion-btn1 w-full flex items-center justify-between  text-left group transition-colors focus:outline-none cursor-pointer"
+            >
+              <span
+                class="font-medium text-xl transition-colors"
+              >
+                Business Analytics & Intelligence 
+              </span>
+              <!-- The Arrow Icon -->
+              <i
+                class="ph ph-caret-down text-slate-400 text-lg transition-transform duration-300 transform group-hover:text-blue-500"
+              ></i>
+            </button>
+
+            <!-- The Content Panel -->
+            <div class="accordion-contents mb-6">
+              <!-- cards -->
+               <div class="mt-8  flex flex-col">
+                <a class=" mb-4 hover:underline" href="#">Microsoft Excel </a>
+                <a class=" mb-4 hover:underline" href="#">SQL</a>
+                <a class=" mb-4 hover:underline" href="#">Microsoft Power BI</a>
+                <a class=" mb-4 hover:underline" href="#">Data Analysis</a>
+                <a class=" mb-4 hover:underline" href="#">Business Analysis</a>
+               </div>
+            </div>
+          </div>
+
+    </div>
+          </div>
+         </section>
+          </article>
+
+        <!-- footer -->
+           <section class=" border-b border-gray-400 bg-[#202230] text-white overflow-hidden">
+            <div class=" w-[95%] m-auto mt-15 lg:flex justify-between " >
+              <div class="flex flex-col mb-8">
+                 <h1 class="text-xl font-semibold mb-4">About</h1>
+              <a class="hover:underline mb-2" href="#">About Us</a>
+              <a class="hover:underline mb-2" href="#">Contact Us</a>
+              <a class="hover:underline mb-2" href="#">Blog</a>
+              <a class="hover:underline mb-2" href="#">Investors</a>
+            </div>
+                 <div class="flex flex-col mb-8">
+                 <h1 class="text-xl font-semibold mb-4">Discover Udemy</h1>
+              <a class="hover:underline mb-2" href="#">Get the app</a>
+              <a class="hover:underline mb-2" href="#">Teach on Udemy</a>
+              <a class="hover:underline mb-2" href="#">Plans and Pricing</a>
+              <a class="hover:underline mb-2" href="#">Affiliate</a>
+              <a class="hover:underline mb-2" href="#">Help and Support</a>
+            </div>
+                   <div class="flex flex-col mb-8">
+                 <h1 class="text-xl font-semibold mb-4">Udemy for Business</h1>
+              <a class="hover:underline mb-2" href="#">Udemy Business</a>
+                   </div>
+                        <div class="flex flex-col mb-8">
+                 <h1 class="text-xl font-semibold mb-4">Legal & Accessibility</h1>
+              <a class="hover:underline mb-2" href="#">Accessibility statement</a>
+              <a class="hover:underline mb-2" href="#">Privacy policy</a>
+              <a class="hover:underline mb-2" href="#">Sitemap</a>
+              <a class="hover:underline mb-2" href="#">Terms</a>
+            </div>
+            </div>
+           </section>
+
+           <footer class="bg-[#202230] overflow-x-hidden pb-8">
+            <div class="w-[95%] m-auto mt-8 text-white flex flex-col gap-20 justify-between lg:flex-row-reverse">
+              <div class="flex items-center ">
+          <button
+          class=" border-black p-2  h-10 w-10 flex items-center justify-center"
+        >
+          <svg
+            class="w-10 h-10"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+            ></path>
+          </svg>
+        </button>
+        <h1 class="text-xl">English</h1>
+              </div>
+              <div class=" flex items-center gap-4 ">
+                <img width="100px" src="./Online Courses - Learn Anything, On Your Schedule _ Udemy/imgi_39_logo-udemy-inverted.svg" alt="">
+                <p> &copy; 2025 Udemy, Inc.</p>
+              </div>
+      </div>
+
+           </footer>
+
+       <script>
+
+        //  Nav bar for mobile burger button 
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('menu-overlay');
+
+        // Toggle Menu
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close Menu when clicking the dark overlay
+        overlay.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+ 
+        
+           // FOOTER ACCORDION 
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".accordion-btn1");
+  const breakpoint = 768;
+
+  const closeAll = () => {
+    document.querySelectorAll(".accordion-contents").forEach(c => {
+      c.style.maxHeight = c.style.opacity = "0";
+      c.style.visibility = "hidden";
+      c.previousElementSibling.querySelector("i")?.classList.remove("rotate-180");
+    });
+  };
+
+  const toggle = (e) => {
+    const btn = e.currentTarget;
+    const content = btn.nextElementSibling;
+    const arrow = btn.querySelector("i");
+    const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
+    closeAll(); // close others first
+
+    if (isOpen) {
+      content.style.maxHeight = content.style.opacity = "0";
+      content.style.visibility = "hidden";
+      arrow.classList.remove("rotate-180");
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.opacity = "1";
+      content.style.visibility = "visible";
+      arrow.classList.add("rotate-180");
+    }
+  };
+
+  const update = () => {
+    const isDesktop = window.innerWidth >= breakpoint;
+
+    document.querySelectorAll(".border-b").forEach(item => {
+      item.classList.toggle("md:col-span-1", isDesktop);
+    });
+
+    document.querySelectorAll(".accordion-contents").forEach(content => {
+      if (isDesktop) {
+        content.style.maxHeight = "1000px";
+        content.style.opacity = "1";
+        content.style.visibility = "visible";
+      } else if (!content.style.maxHeight || content.style.maxHeight === "1000px") {
+        content.style.maxHeight = content.style.opacity = "0";
+        content.style.visibility = "hidden";
+      }
+    });
+
+    buttons.forEach(btn => {
+      btn.classList.toggle("cursor-default", isDesktop);
+      btn.classList.toggle("pointer-events-none", isDesktop);
+      btn.querySelector("i")?.classList.toggle("hidden", isDesktop);
+      btn.onclick = isDesktop ? null : toggle;
+    });
+  };
+
+  // Initial + resize (debounced)
+  update();
+  let timer;
+  window.addEventListener("resize", () => {
+    clearTimeout(timer);
+    timer = setTimeout(update, 100);
+  });
+});
+
+// FAQS Accordion
+ 
+ // Select all accordion buttons
+        const accordions = document.querySelectorAll('.accordion-btn');
+
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                // 1. Toggle the icon rotation
+                const icon = this.querySelector('i');
+                icon.classList.toggle('rotate-180');
+                
+                // 2. Change text color to blue when active (optional aesthetic choice)
+                const text = this.querySelector('span');
+                // text.classList.toggle('text-blue-600');
+
+                // 3. Handle the contentf panel
+                const contentf = this.nextElementSibling;
+                
+                if (contentf.style.maxHeight) {
+                    // If it is open, close it
+                    contentf.style.maxHeight = null;
+                    contentf.classList.remove('open');
+                } else {
+                    // If it is closed, open it to its specific scrollHeight
+                    contentf.style.maxHeight = contentf.scrollHeight + "px";
+                    contentf.classList.add('open');
+                }
+            });
+        });
+
+
+       </script>
+</body>
+</html>
